@@ -134,17 +134,114 @@ section{padding:88px 5vw}
 .why-desc{font-size:13px;color:rgba(255,255,255,.58);line-height:1.6}
 
 /* ── TESTIMONIALS ── */
-#testimonials{background:var(--off)}
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1200px;margin:0 auto}
-.testi-card{background:#fff;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);transition:all .3s;border:1px solid transparent}
-.testi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);border-color:var(--blue-pale)}
-.testi-quote{font-size:40px;color:var(--blue-pale);line-height:1;margin-bottom:6px;font-family:Georgia,serif}
-.testi-stars{color:var(--gold);font-size:13px;margin-bottom:8px;letter-spacing:2px}
-.testi-text{font-size:15px;color:var(--body);line-height:1.7;margin-bottom:20px;font-style:italic}
-.testi-author{display:flex;align-items:center;gap:13px}
-.testi-av{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:15px;flex-shrink:0}
-.testi-name{font-weight:700;font-size:14px;color:var(--dark)}
-.testi-loc{font-size:12px;color:var(--muted);margin-top:2px}
+/* ───────── TESTIMONIALS ───────── */
+#testimonials{
+  background: var(--off);
+  padding: 80px 20px;
+}
+
+.testi-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 50px auto 0;
+  align-items: stretch;
+}
+
+.testi-card{
+  background: #fff;
+  border-radius: 24px;
+  padding: 30px 26px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.35s ease;
+  border: 1px solid #eef3f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+}
+
+.testi-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+  border-color: #dcecff;
+}
+
+.testi-quote{
+  font-size: 48px;
+  line-height: 1;
+  color: #dbe9ff;
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+.testi-stars{
+  color: #f4b400;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.testi-text{
+  font-size: 15px;
+  line-height: 1.9;
+  color: #4a5568;
+  font-style: italic;
+  margin-bottom: 28px;
+}
+
+.testi-author{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: auto;
+}
+
+.testi-av{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#0b72ff,#11b6c9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.testi-name{
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2px;
+}
+
+.testi-loc{
+  font-size: 13px;
+  color: #7b8794;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+  #testimonials{
+    padding: 60px 16px;
+  }
+
+  .testi-grid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .testi-card{
+    min-height: auto;
+    padding: 24px 22px;
+  }
+
+}
 
 /* ── FAQ ── */
 #faq{background:#fff}
@@ -368,44 +465,116 @@ footer{background:var(--blue-dark);color:rgba(255,255,255,.65);padding:56px 5vw 
 </section>
 
 <!-- TESTIMONIALS -->
+<!-- TESTIMONIALS -->
 <section id="testimonials">
+
   <div class="sec-header center fade">
     <div class="tag">Customer Reviews</div>
-    <h2 class="sec-title">What Rajkot <span>Customers Say</span></h2>
-    <p class="sec-sub">Real reviews from real customers who trust Traditional RO for their daily drinking water.</p>
+
+    <h2 class="sec-title">
+      What Rajkot <span>Customers Say</span>
+    </h2>
+
+    <p class="sec-sub">
+      Real reviews from real customers who trust Traditional RO
+      for their daily drinking water.
+    </p>
   </div>
+
   <div class="testi-grid">
+
+    <!-- CARD -->
     <div class="testi-card fade d1">
-      <div class="testi-quote">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-text">Excellent service! The technician came within 2 hours of my call and fixed my RO perfectly. Very professional and affordable. Highly recommend Traditional RO to everyone in Rajkot!</div>
-      <div class="testi-author"><div class="testi-av">RK</div><div><div class="testi-name">Rajesh Kumar</div><div class="testi-loc">Kalawad Road, Rajkot</div></div></div>
+      <div>
+        <div class="testi-quote">“</div>
+        <div class="testi-stars">★★★★★</div>
+
+        <div class="testi-text">
+          Excellent service! The technician came within 2 hours of my call
+          and fixed my RO perfectly. Very professional and affordable.
+          Highly recommend Traditional RO to everyone in Rajkot!
+        </div>
+      </div>
+
+      <div class="testi-author">
+        <div class="testi-av">RK</div>
+
+        <div>
+          <div class="testi-name">Rajesh Kumar</div>
+          <div class="testi-loc">Kalawad Road, Rajkot</div>
+        </div>
+      </div>
     </div>
+
+    <!-- CARD -->
     <div class="testi-card fade d2">
-      <div class="testi-quote">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-text">I got my new RO installed last month. The team was very courteous, cleaned up after themselves, and explained everything properly. Water quality is excellent now. Thank you!</div>
-      <div class="testi-author"><div class="testi-av">PD</div><div><div class="testi-name">Priya Doshi</div><div class="testi-loc">Mavdi, Rajkot</div></div></div>
+      <div>
+        <div class="testi-quote">“</div>
+        <div class="testi-stars">★★★★★</div>
+
+        <div class="testi-text">
+          I got my new RO installed last month. The team was very courteous,
+          cleaned up after themselves, and explained everything properly.
+          Water quality is excellent now. Thank you!
+        </div>
+      </div>
+
+      <div class="testi-author">
+        <div class="testi-av">PD</div>
+
+        <div>
+          <div class="testi-name">Priya Doshi</div>
+          <div class="testi-loc">Mavdi, Rajkot</div>
+        </div>
+      </div>
     </div>
+
+    <!-- CARD -->
     <div class="testi-card fade d3">
-      <div class="testi-quote">"</div>
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-text">Best RO service in Rajkot! Have been their AMC customer for 3 years now. They always send reminders for filter changes and the water quality has never been better. Very trustworthy!</div>
-      <div class="testi-author"><div class="testi-av">MS</div><div><div class="testi-name">Mehul Shah</div><div class="testi-loc">150 Feet Ring Road, Rajkot</div></div></div>
+      <div>
+        <div class="testi-quote">“</div>
+        <div class="testi-stars">★★★★★</div>
+
+        <div class="testi-text">
+          Best RO service in Rajkot! Have been their AMC customer for 3 years now.
+          They always send reminders for filter changes and the water quality
+          has never been better. Very trustworthy!
+        </div>
+      </div>
+
+      <div class="testi-author">
+        <div class="testi-av">MS</div>
+
+        <div>
+          <div class="testi-name">Mehul Shah</div>
+          <div class="testi-loc">150 Feet Ring Road, Rajkot</div>
+        </div>
+      </div>
     </div>
+
+    <!-- CARD -->
     <div class="testi-card fade d4">
-      <div class="testi-quote">"</div>
-      <div class="testi-star"><span style="color:#f4b400;">★★★★★</span></div>
-      <div class="testi-text">Excellent service! The technician came within 2 hours of my call and fixed my RO perfectly. Very professional and affordable. Highly recommend Traditional RO to everyone in Rajkot!</div>
-      <div class="testi-author"><div class="testi-av">Or</div><div><div class="testi-name">Om raviya</div><div><div class="testi-loc">speedwell party plot</div></div></div>
+      <div>
+        <div class="testi-quote">“</div>
+        <div class="testi-stars">★★★★★</div>
+
+        <div class="testi-text">
+          Fast response and genuine pricing. The RO service was completed
+          professionally and the technician explained maintenance tips clearly.
+        </div>
+      </div>
+
+      <div class="testi-author">
+        <div class="testi-av">OR</div>
+
+        <div>
+          <div class="testi-name">Om Raviya</div>
+          <div class="testi-loc">Speedwell Party Plot, Rajkot</div>
+        </div>
+      </div>
+    </div>
+
   </div>
-      <div class="testi-card fade d5">
-        <div class="testi-quote"></div>
-        <div class="testi-star"><span style="colour:#f4b400;">★★★★★</sapn></div>
-        <div class="testi-text">Best RO service in Rajkot! Have been their AMC customer for 3 years now. They always send reminders for filter changes and the water quality has never been better. Very trustworthy!</div>
-        <div class="testi-author"><div class="testi-av">AL</div><div><div class="testi-name">Ayush Lamba</div><div><div class="testi-loc">mota mova,rajkot</div></div></div>
-   </div>
-      
 </section>
 
 <!-- FAQ -->
